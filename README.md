@@ -57,15 +57,12 @@ Se encarga de:
 
 ## 🛠️ Tecnologías utilizadas
 
-- Lenguaje: (Java / C / el que uses)
+- Lenguaje: Java 
 - Herramientas:
-  - YACC / BYACC / CUP
-  - (agregá otras si usaste)
+  - YACC 
+
 - Estructuras:
   - Listas
   - Pilas
-  - Tablas de símbolos
-
----
 
 ## 📁 Estructura del proyecto
