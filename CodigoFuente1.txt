@@ -1,0 +1,123 @@
+parte2
+BEGIN
+   ## CASOS QUE FALTAN AGREGAR
+         ##CODIGO PRUEBA
+   LONGINT a,b,e;
+                                DOUBLE c,d;
+                                ##Compatibilidad por tipo (CON TOD incluido)
+                                a:= b+1;
+                                a:= 10;
+                                d:= d + TOD(a * b);
+
+                                ##ERROR de tipo
+                                ##a:= c;
+                                ##d:= a+b;
+                                LONGINT HEX;
+                                     TYPEDEF enterito := LONGINT [-1, 3];
+                                         enterito j;
+                                         j := 2;
+                                         j := 5 + j;
+                                         if( j < 4) then
+                                             j := 0;
+                                         end_if;
+
+                                     TYPEDEF doublecito := DOUBLE [0.0, 5.7];
+                                             doublecito f;
+                                             f := 2.1;
+                                             f := f + f;
+                                             if( f < 6.0) then
+                                                 f := 0.0;
+                                             else
+                                                 f := 4.0;
+                                             end_if;
+
+
+
+
+                                     ##LONGINT x;
+                                LONGINT fun sumar( LONGINT y )
+                                         BEGIN
+                                             LONGINT x;
+                                             x := 1 + 1;
+                                             ret (x);
+                                END
+                                     ## VARIABLES SIN ALCANCE
+                                LONGINT fun tieneAlcance( LONGINT y2 )
+                                             BEGIN
+                                                 LONGINT z;
+                                                 ##x := 1 + 1;
+                                                 ret (z);
+                                             END
+                                     ##a:= z+ 2;
+    ##Caso de redefinir variables etiquetas,etc.
+
+    ## CASO IF ANIDADO y variantes
+    ##-------COMPLETO IF-ELSE -------------
+        if ( HEX > 11) then BEGIN
+            HEX := HEX + 2;
+        END
+        else begin
+           HEX := HEX + 2;
+        end
+        END_IF;
+
+    ##---COMPLETO Y DE CUERPO  OTRO IF -----
+        IF(HEX > 12) THEN begin
+            HEX := HEX + 2;
+            IF (HEX > 10) THEN
+                HEX:= HEX+2;
+            end_if;
+        end
+        end_if;
+    DOUBLE HEX2;
+##-------COMPLETO IF-ELSE -------------
+        if ( HEX2 > 5.0) then BEGIN
+            HEX2 := HEX2 + 2.0;
+        END
+        else begin
+           HEX2 := HEX2 + 2.0;
+        end
+        END_IF;
+
+    ##---COMPLETO Y DE CUERPO  OTRO IF -----
+        IF(HEX2 > 10.0) THEN begin
+            HEX2 := HEX2 + 2.0;
+            IF (HEX2 > 10.0) THEN
+                HEX2:= HEX2+2.0;
+            end_if;
+        end
+        end_if;
+    ## ASIGNACION MULTIPLES
+    LONGINT am,bm,cm;
+     am,bm,cm := 1+4, 2*4, am+5;
+
+    ## USO de struct
+
+    ## GOTO con y sin presencia de etiqueta
+    LONGINT gt;
+    gt:= 4+4*4;
+    gt:= 3+456;
+    GOTO etiquetaPrueba@;
+    GOTO etiquetaPrueba2@;
+    gt:= 454;
+    gt:= 1;
+    gt:= 0;
+    etiquetaPrueba@
+    ##etiquetaPrueba2@
+
+    TYPEDEF Struct  <LONGINT,DOUBLE,DOUBLE> (
+            as,
+            bs,
+            cs,
+        ) s1;
+        s1 struct1;
+        s1 struct2;
+
+
+    ## SENTENCIA REPEAT AND WHILE
+        REPEAT BEGIN
+        HEX := HEX +1;
+        END
+        WHILE (HEX <10);
+
+END

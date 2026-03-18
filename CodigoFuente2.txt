@@ -1,0 +1,38 @@
+structs
+begin
+    {DOUBLE a,b,c,d,e,f;
+    a:= 1.0;
+    b := 2.0;
+    c:=3.0;
+    d:=3.0;
+    e:= 4.5d4;
+    outf(e);
+
+    double m;
+    m:= e * 2.0d-2;
+    f:=-30.0;
+    a:= a + b * c / d + f;  ##1,0 + 2,0 * 3.0 / 3.0 + -30  =  -27
+    OUTF(a);
+    b := a + c * d * b; ##-3
+    OUTF(b);
+    c := a - c * e - f * a + e - e * c + f * a; ##-21 - ( 3 * 4.5d4)  + 4.5d4 - (3 * 4.5d4)
+    OUTF(c);
+    d:= a / a * e - a / a * e + d * 3 / 100.0 - d * 3.0 / 10.0 / 10.0; ##- a/a + b*c/d - c*d/b + e /d; ##15000
+    outf(d);
+
+    longint g,h,i,j,k,l;
+    g:= 1;
+    h := 2;
+    i:=3;
+    j:=3;
+    k:= 4;
+    l:=-30;
+    g:= g + h * i / j + l;  ##1,0 + 2,0 * 3.0 / 3.0 + -30  =  -27
+    ##OUTF(g);
+    g:= g+h*i*g;}
+    LONGINT a,b;
+    a := 100;
+    b := 5;
+    a :=  a * b / 500;
+    outf(a);
+end

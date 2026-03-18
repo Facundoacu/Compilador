@@ -1,0 +1,16 @@
+parte1
+BEGIN
+
+    ##---------------------------DECLARACION DE FUNCION--------------------------------------------
+    LONGINT fun sumar( LONGINT X )
+    BEGIN
+        x := 1 + 1;
+        DOUBLE fun dividir ( DOUBLE a )
+        begin
+            x := x/2;
+            ret (a);
+        end
+        ret (x);
+    END
+
+END
